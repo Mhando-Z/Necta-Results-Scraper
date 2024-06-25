@@ -80,7 +80,7 @@ function getResults() {
 
       polished.map((dt) => {
         const { subjects } = dt;
-        if (subjects.length != 1) {
+        if (subjects.length !== 1) {
           console.log(dt);
         }
       });
