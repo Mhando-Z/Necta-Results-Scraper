@@ -6,8 +6,8 @@ Web scraping might sound complicated, but it's simply the process of pulling out
 
 ## Why Axios and Cheerio?
 
-**Cheerio**: The fast, flexible & elegant library for parsing and manipulating HTML and XML.  
-**Axios**: Axios is a promise-based HTTP Client for Node.js and the browser.
+Cheerio:` The fast, flexible & elegant library for parsing and manipulating HTML and XML.  
+Axios:` Axios is a promise-based HTTP Client for Node.js and the browser.
 
 
 ## NOTE:
@@ -33,14 +33,14 @@ Make sure you have Node.js installed. You can download Node.js from [here](https
 
 ### Step 1: Preparation
 
-First, initialize a new project:
+First, initialize a new project:`
 ```bash
 mkdir web-scraping
 cd web-scraping
 npm init -y
 ```
 
-Now, install Axios and Cheerio:
+Now, install Axios and Cheerio:`
 ```bash
 npm install axios cheerio
 ```
@@ -57,10 +57,7 @@ const url = 'https://example.com'; // Replace with the URL you want to scrape
 axios.get(url)
   .then(response => {
     console.log(response.data); // This will print the raw HTML data
-  })
-  .catch(error => {
-    console.error(`Could not fetch the data: ${error}`);
-  });
+  
 ```
 
 ### Step 3: Parse the Raw HTML Data
@@ -78,15 +75,12 @@ axios.get(url)
     const html = response.data;
     const $ = cheerio.load(html);
     // Now you can use Cheerio to select elements and extract data
-  })
-  .catch(error => {
-    console.error(`Could not fetch the data: ${error}`);
-  });
+  
 ```
 
 ### Step 4: Collect Only the Data You Need
-
-Use Cheerio's selectors to extract the specific data you need. For example, if you want to extract all the text within `<h2>` tags:
+```
+Use Cheerio's selectors to extract the specific data you need. For example, if you want to extract all the text within `<h2>` tags:`
 
 ```javascript
 const axios = require('axios');
@@ -101,22 +95,13 @@ axios.get(url)
 
     const data = [];
 
-    $('h2').each((index, element) => {
-      const text = $(element).text();
-      data.push({ index, text });
-    });
-
-    console.log(data);
-  })
-  .catch(error => {
-    console.error(`Could not fetch the data: ${error}`);
-  });
+    
 ```
 
 ## Challenges
 
-- **Formatting Results**: The main challenge was formatting the results into an array of objects. This required a lot of thinking and maneuvering to make the data look as it was requested.
-- **Lack of CSS Classes**: The webpage had no CSS classes, which posed another challenge. When using Cheerio for scraping data, CSS selectors are crucial. Since CSS was not there, I had to collect all data with the `table` element.
+- Formatting Results:The main challenge was formatting the results into an array of objects. This required a lot of thinking and maneuvering to make the data look as it was requested.
+- Lack of CSS Classes:` The webpage had no CSS classes, which posed another challenge. When using Cheerio for scraping data, CSS selectors are crucial. Since CSS was not there, I had to collect all data with the `table` element.
 
 ## Conclusion
 
