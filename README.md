@@ -1,6 +1,34 @@
 ---
 
-# Web Scraping with JavaScript using Cheerio and Axios
+# NECTA Results Scraper
+
+This script scrapes results from the NECTA website for a chosen school.
+
+## Installation and Usage Instructions
+
+1. **Clone or Fork the Repository**
+   - Ensure your computer has Node.js installed. If not, click [here](https://nodejs.org/) to install Node.js.
+
+2. **Install Packages**
+   - Run `npm install` to install the necessary packages.
+
+3. **Choose School on NECTA Website**
+   - Go to the NECTA website and choose the school whose results you want to scrape.
+
+4. **Update URL in Script**
+   - Copy the URL of the chosen school and update the `url` variable in the `index.js` file with this URL.
+
+5. **Run the Script**
+   - Execute the script by running `node index.js` in your terminal.
+
+6. **Done!**
+   - Happy scraping! You should see the results in seconds.
+
+#Note:
+This script works only on NECTA webpages.
+
+
+# Web Scraping was done using Cheerio and Axios
 
 Web scraping might sound complicated, but it's simply the process of pulling out data from websites. Most of the time, we normally use Python for the job. But that doesn’t mean JavaScript can't do the job. There are many ways to scrape a website using JavaScript. For this project, we are going to use Axios and Cheerio to complete the job.
 
@@ -9,94 +37,6 @@ Web scraping might sound complicated, but it's simply the process of pulling out
 Cheerio:` The fast, flexible & elegant library for parsing and manipulating HTML and XML.  
 Axios:` Axios is a promise-based HTTP Client for Node.js and the browser.
 
-
-## NOTE:
-## If you are interested in only using the script follow the following Steps
-1.Clone or fork the repository make sure your computer has Node installed.
-  if not click this link to install node [here](https://nodejs.org/).\n
-2.Then run npm install to install packages\n
-3.Go to Necta website choose the school you want to scrape there results\n
-4.Copy Url then in index.js file you will find a variable named url, change the variable\n 
-5.then run node index.js\n
-6.Done! happy scraping...\n
-its so easy that it will take you seconds to see the results 
-Remember this Script works only on Necta webpages.
-
-
-# FOR THOSE WHO WANTS TO LEARN HOW IT WAS DONE SEE DOCUMENTATION BELOW
-
-## Prerequisites
-
-Make sure you have Node.js installed. You can download Node.js from [here](https://nodejs.org/).
-
-## Steps for Web Scraping
-
-### Step 1: Preparation
-
-First, initialize a new project:`
-```bash
-mkdir web-scraping
-cd web-scraping
-npm init -y
-```
-
-Now, install Axios and Cheerio:`
-```bash
-npm install axios cheerio
-```
-
-### Step 2: Request the Data with an HTTP Client
-
-Create a new JavaScript file; let's name our file `index.js` for simplicity. In this file, we will use Axios to fetch the HTML content of a web page.
-
-```javascript
-const axios = require('axios');
-
-const url = 'https://example.com'; // Replace with the URL you want to scrape
-
-axios.get(url)
-  .then(response => {
-    console.log(response.data); // This will print the raw HTML data
-  
-```
-
-### Step 3: Parse the Raw HTML Data
-
-Next, we'll use Cheerio to parse the HTML data fetched by Axios.
-
-```javascript
-const axios = require('axios');
-const cheerio = require('cheerio');
-
-const url = 'https://example.com'; // Replace with the URL you want to scrape
-
-axios.get(url)
-  .then(response => {
-    const html = response.data;
-    const $ = cheerio.load(html);
-    // Now you can use Cheerio to select elements and extract data
-  
-```
-
-### Step 4: Collect Only the Data You Need
-```
-Use Cheerio's selectors to extract the specific data you need. For example, if you want to extract all the text within `<h2>` tags:`
-
-```javascript
-const axios = require('axios');
-const cheerio = require('cheerio');
-
-const url = 'https://example.com'; // Replace with the URL you want to scrape
-
-axios.get(url)
-  .then(response => {
-    const html = response.data;
-    const $ = cheerio.load(html);
-
-    const data = [];
-
-    
-```
 
 ## Challenges
 
