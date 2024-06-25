@@ -11,14 +11,14 @@ Axios:` Axios is a promise-based HTTP Client for Node.js and the browser.
 
 
 ## NOTE:
-## If you are just interested in only using the script follow the following steps
+## If you are interested in only using the script follow the following Steps
 1.Clone or fork the repository make sure your computer has Node installed.
-  if not click this link to install node [here](https://nodejs.org/).
-2.Then run npm install to install packages
-3.Go to Necta website choose the school you want to scrape there results
-4.Copy Url then in index.js file you will find a variable named url, change the variable 
-5.then run node index.js 
-6.Done! happy scraping...
+  if not click this link to install node [here](https://nodejs.org/).\n
+2.Then run npm install to install packages\n
+3.Go to Necta website choose the school you want to scrape there results\n
+4.Copy Url then in index.js file you will find a variable named url, change the variable\n 
+5.then run node index.js\n
+6.Done! happy scraping...\n
 its so easy that it will take you seconds to see the results 
 Remember this Script works only on Necta webpages.
 
