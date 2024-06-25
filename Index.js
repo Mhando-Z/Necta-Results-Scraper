@@ -91,4 +91,4 @@ function getResults() {
   }
 }
 
-console.log(getResults());
+getResults();
