@@ -43,7 +43,8 @@ Axios:` Axios is a promise-based HTTP Client for Node.js and the browser.
 - Formatting Results:The main challenge was formatting the results into an array of objects. This required a lot of thinking and maneuvering to make the data look as it was requested.
 - Lack of CSS Classes:` The webpage had no CSS classes, which posed another challenge. When using Cheerio for scraping data, CSS selectors are crucial. Since CSS was not there, I had to collect all data with the `table` element.
 
-##Console Output
+## Console Output
+
 ![Screenshot 1](/image.png)
 
 ## Conclusion
